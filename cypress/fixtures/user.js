@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker';
 const firstName = faker.person.firstName();
 const lastName = faker.person.lastName();
 
-export const user = {
+export let user = {
     firstName: firstName,
     lastName: lastName,
     fullName: firstName + ' ' + lastName,

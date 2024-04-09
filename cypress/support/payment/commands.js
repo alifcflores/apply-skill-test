@@ -11,7 +11,7 @@ class Payment {
     }
 
     payConfirmOrder(){
-        cy.intercept('https://automationexercise.com/payment_done/30000').as('payment-done');
+        cy.intercept('https://automationexercise.com/payment_done/**').as('payment-done');
         cy.get('button').contains('Pay and Confirm Order').click();
         cy.wait('@payment-done').then((xhr)=>{
             expect(xhr.response.statusCode).to.be.equal(200);
