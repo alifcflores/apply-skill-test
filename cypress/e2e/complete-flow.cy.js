@@ -15,7 +15,7 @@ describe('Testing Complete Flow of User', ()=>{
         home.skipHalfwayDownThePage();
     });
 
-    it('Test covering all pages', ()=>{
+    it('Test covering all principal pages', ()=>{
         home.findAProductByDescription('Green Side Placket Detail T-Shirt');
         productDetails.insertProductIntoCart(30);
         cy.clickOnLinkByText('View Cart');
