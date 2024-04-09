@@ -34,17 +34,12 @@ Open Cypress in headless mode
     -  ``commands.js`` is the logic file of test.
     -  ``data.js`` is the data used in tests.
 
-
-
-
-
 ## Patterns
 This project uses the Page Objects pattern.
 
 Variables follow the camelCase pattern: ``calculateTotalAmount``
 
 Preference for using attributes aimed at QA: ``data-qa="signup-name"``
-
 
 ### Buttons and Links
 I always prefer to locate elements by text because if an element changes, it won't break the test code.
@@ -59,7 +54,7 @@ Version without text
 - ``cy.get('button').find('[class=fa fa-shopping-cart]').click();``
 
 Version with text
-- ``cy.get('a').contains('Add to cart').click();``
+- ``cy.get('button').contains('Add to cart').click();``
 
 In addition to being more readable, this also reduces maintenance in the test code since these elements can change easily.
 
