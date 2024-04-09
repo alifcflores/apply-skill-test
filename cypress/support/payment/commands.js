@@ -1,5 +1,6 @@
 import { creditCard } from "./data";
 import { user } from '../../fixtures/user';
+import {paymentDone} from '../../fixtures/urls'
 
 class Payment {
     fillCreditCardInfo(){
@@ -11,7 +12,7 @@ class Payment {
     }
 
     payConfirmOrder(){
-        cy.intercept('/payment_done/**').as('payment-done');
+        cy.intercept(paymentDone).as('payment-done');
         cy.get('button').contains('Pay and Confirm Order').click();
         cy.wait('@payment-done').then((xhr)=>{
             expect(xhr.response.statusCode).to.be.equal(200);
