@@ -9,6 +9,11 @@ Open Cypress project in GUI mode
 Open Cypress in headless mode
 ``npx cypress run``
 
+## Reporter
+I used the mochawesome-reporter because it provides a complete web page containing details and screenshots of errors. 
+
+if cypress is runned in headless mode, automatic generate an reporter saved in: ``reports/html/index.html`` (browse direct from computer)
+
 ## Folder Structure
 ```
 ├── e2e
