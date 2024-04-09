@@ -3,7 +3,7 @@ Showcasing my automation skills using Cypress for Apply Digital enterprise.
 
 # Executing Tests
 
-Open Cypress project
+Open Cypress project in GUI mode
 ``npx cypress open``
 
 Open Cypress in headless mode
