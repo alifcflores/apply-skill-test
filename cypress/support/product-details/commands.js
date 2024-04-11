@@ -1,7 +1,9 @@
+import { productDetails } from '../../fixtures/urls'
+
 class ProductDetails {
     
     acessPageByProductID(productID){
-        cy.visit('/product_details/' + productID)
+        cy.visit(productDetails + productID)
     }
 
     insertProductIntoCart(quantity){
