@@ -1,6 +1,8 @@
+import { home } from "../../fixtures/urls";
+
 class Home {
     acessPage(){
-        cy.visit('/');
+        cy.visit(home);
     }
 
     skipHalfwayDownThePage(){
