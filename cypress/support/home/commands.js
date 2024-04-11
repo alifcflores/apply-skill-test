@@ -4,9 +4,7 @@ class Home {
     }
 
     skipHalfwayDownThePage(){
-        cy.get('body').invoke('prop', 'scrollHeight').then((length)=>{
-            cy.scrollTo(0, length / 2);
-        });
+        cy.scrollTo('center');
     }
 
     findAProductByDescription(productDesc){
